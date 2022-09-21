@@ -7,15 +7,30 @@ img {
   width: 100%;
 }
 
+body {
+  background-color: black;
+}
+
 .container {
-  max-width: 100%;
+  margin: auto;
+  max-width: 1000px;
   height: 100vh;
   padding: 0;
-  background-color: green;
+  background-color: black;
+}
+
+.city {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/TownPicture.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .car-holder {
-  max-width: 100px;
+  margin-top: 2.5rem;
+  margin-left: 2.5rem;
+  max-width: 5rem;
   position: absolute;
 }
 
@@ -28,7 +43,7 @@ img {
 }
 
 .left {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .down {
