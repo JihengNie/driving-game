@@ -4,6 +4,7 @@ var carLocation = {
   x: 0,
   y: 0
 };
+var stopCar = false;
 var intervalID = setInterval(movingStright, 16);
 
 window.addEventListener('keydown', changingDirection);
@@ -17,14 +18,24 @@ function changingDirection(event) {
     $car.className = 'car down';
   } else if (event.key === 'ArrowRight') {
     $car.className = 'car right';
+  } else if (event.key === ' ') {
+    stopCar = !stopCar;
+    if (stopCar) {
+      clearInterval(intervalID);
+    } else {
+      intervalID = setInterval(movingStright, 16);
+    }
   }
-
-}
-
-function movingStright() {
-  $carHolder.style.transform = 'translate(' + carLocation.x + 'px,' + carLocation.y + 'px)';
-  carLocation.x = carLocation.x + 2;
   if (carLocation.x === 1000) {
     clearInterval(intervalID);
   }
+}
+
+function movingStright() {
+  if (carLocation.x === 1000) {
+    clearInterval(intervalID);
+  }
+  carLocation.x = carLocation.x + 2;
+  $carHolder.style.transform = 'translate(' + carLocation.x + 'px,' + carLocation.y + 'px)';
+
 }
