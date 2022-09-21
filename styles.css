@@ -16,6 +16,11 @@ img {
 
 .car-holder {
   max-width: 100px;
+  transition: -webkit-transform 0.25s;
+  position: absolute;
+}
+
+.car {
   transition: -webkit-transform 0.25s ease-in;
 }
 
