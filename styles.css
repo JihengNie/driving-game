@@ -16,4 +16,21 @@ img {
 
 .car-holder {
   max-width: 100px;
+  transition: -webkit-transform 0.25s ease-in;
+}
+
+.up {
+  transform: rotate(-90deg);
+}
+
+.left {
+  transform: rotate(180deg);
+}
+
+.down {
+  transform: rotate(90deg);
+}
+
+.right {
+  transform: rotate(0deg);
 }
