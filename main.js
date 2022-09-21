@@ -32,9 +32,10 @@ function changingDirection(event) {
 }
 
 function movingStright() {
-  $carHolder.style.transform = 'translate(' + carLocation.x + 'px,' + carLocation.y + 'px)';
-  carLocation.x = carLocation.x + 2;
   if (carLocation.x === 1000) {
     clearInterval(intervalID);
   }
+  carLocation.x = carLocation.x + 2;
+  $carHolder.style.transform = 'translate(' + carLocation.x + 'px,' + carLocation.y + 'px)';
+
 }
